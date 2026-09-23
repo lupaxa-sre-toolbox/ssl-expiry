@@ -234,8 +234,13 @@ def test_empty_peer_certificate_and_sni(monkeypatch: pytest.MonkeyPatch) -> None
     def connect(*_args: object, **_kwargs: object) -> _FakeIO:
         return _FakeIO()
 
-    def wrap(_self: object, _sock: object, server_hostname: str | None = None) -> _FakeIO:
+    def wrap(
+        self: ssl.SSLContext,
+        _sock: object,
+        server_hostname: str | None = None,
+    ) -> _FakeIO:
         seen.append(server_hostname)
+        assert self.minimum_version == ssl.TLSVersion.TLSv1_2
         return _FakeIO()
 
     monkeypatch.setattr(lookup_mod.socket, "create_connection", connect)

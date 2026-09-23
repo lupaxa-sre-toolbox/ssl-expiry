@@ -47,6 +47,9 @@ Probe = Callable[[str, float], LeafCert]
 def probe_certificate(host: str, timeout: float, *, port: int = 443) -> LeafCert:
     """Connect to ``host`` and return the presented leaf certificate.
 
+    The handshake requires TLS 1.2 or newer. Hostname and certificate
+    checks stay off, so an expired or untrusted leaf is still returned.
+
     Parameters
     ----------
     host:
@@ -72,6 +75,7 @@ def probe_certificate(host: str, timeout: float, *, port: int = 443) -> LeafCert
     _require_timeout(timeout)
     server_hostname = None if _is_ip(host) else host
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    context.minimum_version = ssl.TLSVersion.TLSv1_2
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
     with socket.create_connection((host, port), timeout=timeout) as sock:

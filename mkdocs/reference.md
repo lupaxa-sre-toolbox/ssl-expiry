@@ -29,7 +29,7 @@ The TCP port is 443.
 
 | Code | When                                                                                 |
 | :--- | :----------------------------------------------------------------------------------- |
-| `0`  | Help, version, or every certificate is further out than `--warn-days`               |
+| `0`  | Help, version, or every certificate is further out than `--warn-days`                |
 | `1`  | A certificate is due, expired, or the host is invalid                                |
 | `2`  | Usage failed, a file could not be read, no hosts were given, or a connection failed  |
 

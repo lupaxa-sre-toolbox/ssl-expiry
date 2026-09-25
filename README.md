@@ -4,15 +4,9 @@
   </a>
 </p>
 
-<h1 align="center">ssl-expiry</h1>
+<h1 align="center">SSL Expiry</h1>
 
 Check TLS certificate expiration dates on port 443.
-
-<p align="center">
-  <a href="https://ssl-expiry.thelupaxaproject.org/">Documentation</a>
-  ·
-  <a href="https://github.com/lupaxa-sre-toolbox/ssl-expiry">GitHub</a>
-</p>
 
 ## Install
 
@@ -54,6 +48,13 @@ make python-install-dev
 make python-check
 make mkdocs-serve
 ```
+
+## Documentation
+
+The published guide is at
+<https://ssl-expiry.thelupaxaproject.org/>.
+
+Site Markdown lives in `mkdocs/`.
 
 <a href="https://github.com/the-lupaxa-project">
     <img src="https://raw.githubusercontent.com/the-lupaxa-project/brand-assets/master/logos/components/footer-for-child-orgs.svg" alt="The Lupaxa Project Footer" width="100%" />

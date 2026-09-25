@@ -7,7 +7,7 @@
 | `ssl-expiry`                  | The installed command                    |
 | `python -m lupaxa.ssl_expiry` | The same program, run as a Python module |
 
-## CLI arguments
+## CLI Arguments
 
 | Flag                | Default   | Description                                                  |
 | :------------------ | :-------- | :----------------------------------------------------------- |
@@ -25,7 +25,7 @@ Pass several hosts as separate arguments, or separate them with commas.
 With no hosts, the command prints the same text as `--help` and exits `2`.
 The TCP port is 443.
 
-## Exit codes
+## Exit Codes
 
 | Code | When                                                                                 |
 | :--- | :----------------------------------------------------------------------------------- |

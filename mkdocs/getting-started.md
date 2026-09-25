@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 ## Requirements
 
@@ -13,7 +13,7 @@ pip install lupaxa-ssl-expiry
 ssl-expiry --help
 ```
 
-## First run
+## First Run
 
 ```bash
 ssl-expiry example.com example.org
@@ -30,7 +30,7 @@ Module entry point:
 python -m lupaxa.ssl_expiry --version
 ```
 
-### From source (development)
+### From Source (Development)
 
 ```bash
 make init
@@ -38,7 +38,7 @@ make python-install-dev
 ssl-expiry --version
 ```
 
-## Makefile helpers
+## Makefile Helpers
 
 ```bash
 make python-check

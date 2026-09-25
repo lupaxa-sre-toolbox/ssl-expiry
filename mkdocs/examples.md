@@ -1,18 +1,18 @@
 # Examples
 
-## One host
+## One Host
 
 ```bash
 ssl-expiry example.com
 ```
 
-## Several hosts
+## Several Hosts
 
 ```bash
 ssl-expiry example.com example.org example.net
 ```
 
-## A list on disk
+## A List on Disk
 
 `hosts.txt`:
 
@@ -26,19 +26,19 @@ example.org
 ssl-expiry --file hosts.txt --warn-days 14
 ```
 
-## Hosts from another command
+## Hosts from Another Command
 
 ```bash
 printf '%s\n' example.com example.org | ssl-expiry --file -
 ```
 
-## Sorted table
+## Sorted Table
 
 ```bash
 ssl-expiry --sort days --order descending example.com example.org example.net
 ```
 
-## Shorter timeout
+## Shorter Timeout
 
 ```bash
 ssl-expiry example.com --timeout 5
